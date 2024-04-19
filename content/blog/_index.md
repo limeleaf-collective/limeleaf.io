@@ -1,5 +1,5 @@
 +++
-title = "What We Talk About"
+title = "What We Write About"
 sort_by = "date"
 
 [extra]

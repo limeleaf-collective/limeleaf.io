@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title%}
+  {{ page.title}} - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+<main class="container">
+  <section class="grid">
+    <article>
+      <hgroup>
+          <h2>{{ page.title }}</h2>
+      </hgroup>
+
+      <p>
+        <audio controls style="width:100%; background: transparent;">
+          <source src="{{ get_url(path=page.extra.audio_file) }}" type="audio/ogg" />
+        </audio>
+      </p>
+
+      {{ page.content | safe }}
+    </article>
+  </section>
+</main>
+{% endblock content %}

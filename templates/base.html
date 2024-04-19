@@ -11,6 +11,7 @@
 
     <title>{% block title %} {% endblock title %}</title>
 
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon.svg") }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
@@ -26,6 +27,7 @@
             <li><a href="{{ get_url(path="@/members/_index.md") }}">About Us</a></li>
             <li><a href="{{ get_url(path="@/services/_index.md") }}">Services</a></li>
             <li><a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a></li>
+            <li><a href="{{ get_url(path="@/podcast/_index.md") }}">Podcast</a></li>
             <li><a href="{{ get_url(path="@/contact/_index.md") }}">Contact</a></li>
         </ul>
       </nav>

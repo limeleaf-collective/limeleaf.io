@@ -50,10 +50,23 @@
       <article>
         <header>
           <h4><a href="{{ post.permalink }}">{{ post.title }}</a></h4>
-          <time>{{ post.date }}</time>
+          <time>{{ post.date | date(format="%B %d, %Y") }}</time>
         </header>
         {{ post.summary | safe }}
         <footer><a href="{{ post.permalink }}">Continue Reading</a></footer>
+      </article>
+      {% endfor %}
+    </section>
+  {% elif current_path == "/podcast/" %}
+    <section>
+      {% for post in section.pages %}
+      <article>
+        <header>
+          <h4><a href="{{ post.permalink }}">{{ post.title }}</a></h4>
+          <time>{{ post.date | date(format="%B %d, %Y") }}</time> for {{ post.extra.length }}
+        </header>
+        {{ post.summary | safe }}
+        <footer><a href="{{ post.permalink }}">Listen Now</a></footer>
       </article>
       {% endfor %}
     </section>
